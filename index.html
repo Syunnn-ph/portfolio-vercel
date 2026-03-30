@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CIAO-SYUN WANG portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Professional Portfolio - Developer CV</title>
+
+        <!-- Tailwind CSS (CDN for development only) -->
+        <script>
+            // Suppress Tailwind CDN warning
+            if (typeof console !== 'undefined' && console.warn) {
+                const originalWarn = console.warn;
+                console.warn = function (...args) {
+                    if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss.com')) {
+                        return; // Suppress Tailwind CDN warning
+                    }
+                    originalWarn.apply(console, args);
+                };
+            }
+        </script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Font Awesome & Devicon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="body-main" data-lang="en" data-dir="ltr">
+
+        <!-- Loading Screen -->
+        <div class="loader-screen" id="loader">
+            <div class="loader-content">
+                <div class="loader-code-text">
+                    <div class="code-line" data-line="1">const portfolio = {</div>
+                    <div class="code-line" data-line="2"> loading: true,</div>
+                    <div class="code-line" data-line="3"> status: 'initializing...'};</div>
+                </div>
+                <div class="loader-spinner-wrapper">
+                    <div class="loader-spinner"></div>
+                </div>
+                <div class="loader-progress-wrapper">
+                    <div class="loader-progress-bar"></div>
+                </div>
+                <div class="loader-percentage" id="loaderPercent">0%</div>
+            </div>
+        </div>
+
+        <!-- Navigation Header -->
+        <header class="main-header" id="header">
+            <nav class="nav-container">
+                <div class="nav-brand">
+                    <div class="brand-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">Dev</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </div>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-text" data-text-en="Home" data-text-ch="主頁">Home</span>
+                    </a>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-text" data-text-en="Thesis" data-text-ch="碩士論文">About</span>
+                    </a>
+                    <a href="#skills" class="nav-link" data-section="skills">
+                        <i class="fas fa-code"></i>
+                        <span class="nav-text" data-text-en="Skills" data-text-ch="技能">Skills</span>
+                    </a>
+                    <a href="#WorkExperience" class="nav-link" data-section="WorkExperience">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="nav-text" data-text-en="Work Experience" data-text-ch="工作經驗">WorkExperience</span>
+                    </a>
+                    <a href="#EduJourney" class="nav-link" data-section="EduJourney">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="nav-text" data-text-en="Edu Journey" data-text-ch="學習歷程">EduJourney</span>
+                    </a>
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <i class="fas fa-rocket"></i>
+                        <span class="nav-text" data-text-en="Projects" data-text-ch="過往專案">Projects</span>
+                    </a>
+                </div>
+
+                <div class="nav-controls">
+                    <button class="lang-toggle" id="langToggle" title="Toggle Language">
+                        <i class="fas fa-language"></i>
+                        <span class="lang-text">CH</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-background">
+                    <div class="code-grid-bg"></div>
+                    <div class="floating-particles" id="particles"></div>
+                </div>
+
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-greeting">
+                            <span class="greeting-text"
+                                data-text-en="Institute of Manufacturing Information and Systems (IMIS), NCKU, Taiwan"
+                                data-text-ch="國立成功大學 |
+                            製造資訊與系統研究所"></span>
+                        </div>
+
+                        <h1 class="hero-name" id="heroName">
+                            <span class="name-prefix">const</span>
+                            <span class="name-operator">=</span>
+                            <span class="name-value">王巧薰 CIAO-SYUN WANG;</span>
+                            <span class="greeting-cursor">|</span>
+                        </h1>
+
+                        <div class="hero-title">
+                            <span class="title-prefix">//</span>
+                            <span class="title-text" data-text-en="Full Stack Developer" data-text-ch="全端開發工程師">Full
+                                Stack Developer</span>
+                        </div>
+
+                        <p class="hero-description"
+                            data-text-en="Developer with a full stack mindset, focused on building thoughtful and scalable learning experiences for the modern web."
+                            data-text-ch="具備全端開發思維的開發者，專注於為現代網路打造兼具深度與可擴展性的學習體驗。">
+                            Developer with a full stack mindset, focused on building thoughtful and scalable learning
+                            experiences for the modern web.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#skills" class="btn btn-primary">
+                                <span data-text-en="view skills" data-text-ch="查看程式能力">view skills</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary">
+                                <span data-text-en="View Projects" data-text-ch="查看過往專案">View Projects</span>
+                                <i class="fas fa-code"></i>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-container">
+                            <div class="profile-image-glow"></div>
+                            <div class="profile-image-frame">
+                                <div class="profile-image" id="profileImage">
+                                    <div class="profile-placeholder">
+                                        <img src="./images/pf.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="floating-badge badge-1">
+                                <i class="fab fa-react"></i>
+                                <div class="badge-content">
+                                    <span class="badge-title">React</span>
+                                    <span class="badge-libs">Hooks</span>
+                                </div>
+                            </div>
+                            <div class="floating-badge badge-2">
+                                <i class="fab devicon-csharp-plain"></i>
+                                <div class="badge-content">
+                                    <span class="badge-title">C#</span>
+                                    <span class="badge-libs">ASP.NET, ADO.NET</span>
+                                </div>
+                            </div>
+                            <div class="floating-badge badge-3">
+                                <i class="fab fa-js"></i>
+                                <div class="badge-content">
+                                    <span class="badge-title">JavaScript</span>
+                                    <span class="badge-libs">ES6+, TypeScript, jQuery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section thesis-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">01</span>
+                        <h2 class="section-title">
+                            <span class="title-bracket">&lt;</span>
+                            <span class="title-text" data-text-en="Thesis" data-text-ch="碩士論文">Thesis</span>
+                            <span class="title-bracket">/&gt;</span>
+                        </h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="thesis-content">
+                        <div class="thesis-text-wrapper">
+                            <div class="thesis-intro">
+                                <h1 class="thesis-title"
+                                    data-text-en="Development of an Adaptive Intervention Tutoring Agent Based on Hierarchical Root Cause Diagnosis: A Case Study of Cross-domain Digital Reading"
+                                    data-text-ch="基於層級根因診斷之自適應介入導師代理人開發 - 以跨領域數位閱讀應用為例">Development of an Adaptive
+                                    Intervention Tutoring Agent Based on Hierarchical Root Cause Diagnosis: A Case Study
+                                    of Cross-domain Digital Reading</h1>
+
+                                <p class="thesis-text"
+                                    data-text-en="Applying the PDCA cycle to digital learning by analyzing student activity traces and conducting hierarchical root cause analysis to assist teachers."
+                                    data-text-ch="將製造PDCA流程帶入數位學習領域，透過足跡紀錄與分析，對學生學習狀況進行層級根因分析，協助傳統教師教學與理解學生。">
+                                    Applying the PDCA cycle to digital learning by analyzing student activity traces and
+                                    conducting hierarchical root cause analysis to assist teachers.
+                                </p>
+                                <p class="thesis-text"
+                                    data-text-en="The AI tutor agent is designed to complement rather than replace teachers."
+                                    data-text-ch="AI導師代理人的目的並非取代教師，而是與教師教學相長。">
+                                    The AI tutor agent is designed to complement rather than replace teachers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="thesis-image-wrapper">
+                            <div class="thesis-image-container">
+                                <div class="code-block">
+                                    <div class="code-line">
+                                        <span class="code-keyword">const</span>
+                                        <span class="code-variable" data-text-en="thesis"
+                                            data-text-ch="論文">thesis</span>
+                                        <span class="code-operator">=</span>
+                                        <span class="code-brace">{</span>
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-property" data-text-en="'Dynamic_Student_Knowledge_Graph'"
+                                            data-text-ch="'動態學生知識圖譜'">Dynamic_Student_Knowledge_Graph</span>
+                                        <span class="code-operator">:</span> <br>
+                                        <span class="code-bracket">[</span>
+                                        <span class="code-string" data-text-en="'Dual-layer Knowledge Graph'"
+                                            data-text-ch="'雙層知識圖譜'">'Dual-layer Knowledge Graph'</span>
+                                        <span class="code-comma">,</span>
+                                        <span class="code-string" data-text-en="'Bayesian Update KG'"
+                                            data-text-ch="'貝葉斯更新'">'Bayesian Update KG'</span>
+                                        <span class="code-bracket">]</span>
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-property" data-text-en="Intervention_Decision_Schema"
+                                            data-text-ch="'介入決策引擎'">Intervention_Decision_Schema</span>
+                                        <span class="code-operator">:</span> <br>
+                                        <span class="code-bracket">[</span>
+                                        <span class="code-string" data-text-en="'BFS Root Cause Analysis'"
+                                            data-text-ch="'BFS跨層跟因追溯'">'BFS Root Cause Analysis'</span>
+                                        <span class="code-comma">,</span>
+                                        <span class="code-string" data-text-en="'ZPD Theory'"
+                                            data-text-ch="'近側發展區間理論'">'ZPD Theory'</span>
+                                        <span class="code-comma">,</span>
+                                        <span class="code-string"
+                                            data-text-en="'Sentence Embedding Intent Classification'"
+                                            data-text-ch="'句子嵌入意圖分類'">'Sentence Embedding Intent Classification'</span>
+                                        <span class="code-comma">,</span>
+                                        <span class="code-string" data-text-en="'Behavior Anomaly Detection'"
+                                            data-text-ch="'行為異常偵測'">'Behavior Anomaly Detection'</span>
+                                        <span class="code-bracket">]</span>
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-property" data-text-en="'Cross_domain_Knowledge_Network'"
+                                            data-text-ch="'跨域知識網路建構'">Cross_domain_Knowledge_Network</span>
+                                        <span class="code-operator">:</span> <br>
+                                        <span class="code-bracket">[</span>
+                                        <span class="code-string" data-text-en="'Semantic Distance Evaluation'"
+                                            data-text-ch="'語意距離評估'">'Semantic Distance Evaluation'</span>
+                                        <span class="code-comma">,</span>
+                                        <span class="code-string" data-text-en="'LLM Output Feedback'"
+                                            data-text-ch="'LLM輸出回饋'">'LLM Output Feedback'</span>
+                                        <span class="code-bracket">]</span>
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="code-brace">}</span>
+                                        <span class="code-semicolon">;</span>
+                                        <span class="code-cursor">|</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section skills-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">02</span>
+                        <h2 class="section-title">
+                            <span class="title-bracket">&lt;</span>
+                            <span class="title-text" data-text-en="Skills" data-text-ch="技能">Skills</span>
+                            <span class="title-bracket">/&gt;</span>
+                        </h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3 class="category-title" data-text-en="Frontend" data-text-ch="前端">Frontend</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">React</span>
+                                        <span class="skill-level" data-text-en="familiar"
+                                            data-text-ch="熟悉">Familiar</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">TypeScript</span>
+                                        <span class="skill-level" data-text-en="familiar"
+                                            data-text-ch="熟悉">Familiar</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">CSS</span>
+                                        <span class="skill-lib">Bootstrap / Tailwind</span>
+                                        <span class="skill-level" data-text-en="familiar"
+                                            data-text-ch="熟悉">Familiar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="category-title" data-text-en="Backend" data-text-ch="後端">Backend</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">C#</span>
+                                        <span class="skill-lib">ASP.NET / ADO.NET</span>
+                                        <span class="skill-level" data-text-en="familiar"
+                                            data-text-ch="熟悉">Familiar</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Python</span>
+                                        <span class="skill-level" data-text-en="exploring"
+                                            data-text-ch="學習中">exploring</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="category-title" data-text-en="Tools & Others" data-text-ch="其他工具">Tools & Others
+                            </h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Unity</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">3Dmax / Blender / Sketchfab</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Adobe Pr / Ps / Au</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="category-title" data-text-en="Languages" data-text-ch="語言能力">Languages
+                                & Others</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Mandarin</span>
+                                        <span class="skill-level" data-text-en="Mother Language"
+                                            data-text-ch="母語">Mother Language</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-percent="810" data-full-percent="990">
+                                    <div class="skill-header">
+                                        <span class="skill-name" data-text-en="English (TOEIC)"
+                                            data-text-ch="英語">English (TOEIC)</span>
+                                        <div>
+                                            <span class="skill-percent">0</span>
+                                            <span class="skill-full-percent">/ 990</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-percent="5" data-full-percent="6">
+                                    <div class="skill-header">
+                                        <span class="skill-name" data-text-en="Korean (TOPIK)" data-text-ch="韓語">Korean
+                                            (TOPIK)</span>
+                                        <div>
+                                            <span class="skill-percent">0</span>
+                                            <span class="skill-full-percent">/ 6</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WorkExperience Section -->
+            <section id="WorkExperience" class="section experience-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">03</span>
+                        <h2 class="section-title">
+                            <span class="title-bracket">&lt;</span>
+                            <span class="title-text" data-text-en="Work Experience" data-text-ch="工作經驗">Work
+                                Experience</span>
+                            <span class="title-bracket">/&gt;</span>
+                        </h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-year">2022/5 - 2025/1 (2y9m)</div>
+                                </div>
+                                <h3 class="timeline-title" data-text-en="Web Development & Maintenance Technician"
+                                    data-text-ch="網頁建置與維護技術人員">
+                                    Web Development & Maintenance Technician
+                                </h3>
+                                <div class="timeline-company">
+                                    <i class="fas fa-building"></i>
+                                    <span data-text-en="College of Environment and Ecology, NUTN"
+                                        data-text-ch="國立臺南大學 環境與生態學院">
+                                        College of Environment and Ecology, NUTN
+                                    </span>
+                                </div>
+                                <div class="timeline-achievements">
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Routine website content updates and maintenance"
+                                            data-text-ch="日常網頁內容更新與維護">
+                                            Routine website content updates and maintenance
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Website vulnerability identification and patching"
+                                            data-text-ch="網頁漏洞排查與修正">
+                                            Website vulnerability identification and patching
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-tags">
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-year">2023/5 - 2025/1 (1y9m)</div>
+                                </div>
+                                <h3 class="timeline-title"
+                                    data-text-en="Research Assistant, Ministry of Education Project"
+                                    data-text-ch="教育部計畫研究助理">
+                                    Research Assistant, Ministry of Education Project
+                                </h3>
+                                <div class="timeline-company">
+                                    <i class="fas fa-building"></i>
+                                    <span data-text-en="Dept. of Digital Learning and Technology, NUTN"
+                                        data-text-ch="國立臺南大學 數位學習與科技學系">
+                                        Dept. of Digital Learning and Technology, NUTN
+                                    </span>
+                                </div>
+                                <div class="timeline-achievements">
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Project Assistant — MOE Digital Advancement Program"
+                                            data-text-ch="教育部數位精進方案｜計畫助理">
+                                            Project Assistant — MOE Digital Advancement Program
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Voice Actor — Elementary School Curriculum R&D Project"
+                                            data-text-ch="國小教材研發實驗計畫｜配音人員">
+                                            Voice Actor — Elementary School Curriculum R&D Project
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Videography & Editing — MOOCs Courseware Production"
+                                            data-text-ch="磨課師教材｜攝影 & 剪輯">
+                                            Videography & Editing — MOOCs Courseware Production
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Emcee — NSTC 111 Annual Research Showcase"
+                                            data-text-ch="國科會111年度成果發表會｜司儀">
+                                            Emcee — NSTC 111 Annual Research Showcase
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EduJourney Section -->
+            <section id="EduJourney" class="section experience-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        <h2 class="section-title">
+                            <span class="title-bracket">&lt;</span>
+                            <span class="title-text" data-text-en="Educational Journey" data-text-ch="學習歷程">Educational
+                                Journey</span>
+                            <span class="title-bracket">/&gt;</span>
+                        </h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-year">2025/9 - Present</div>
+                                    <div class="timeline-badge" data-text-en="Current" data-text-ch="在學中">Current</div>
+                                </div>
+                                <h3 class="timeline-title"
+                                    data-text-en="M.S. Student, Institute of Manufacturing Information and Systems (IMIS)"
+                                    data-text-ch="製造資訊與系統研究所 | 碩一">M.S. Student, Institute of Manufacturing Information
+                                    and Systems (IMIS)
+                                </h3>
+                                <div class="timeline-company"
+                                    data-text-en="National Cheng Kung University (NCKU), Taiwan"
+                                    data-text-ch="國立成功大學（NCKU）">
+                                    <i class="fas fa-building"></i>
+                                    National Cheng Kung University (NCKU), Taiwan
+                                </div>
+                                <ul class="timeline-description">
+                                    <li data-text-en="Accumulating hands-on development experience"
+                                        data-text-ch="累積實作經驗"></li>
+                                    <li data-text-en="Applying academic research to real-world industry problems"
+                                        data-text-ch="將學術研究應用於真實產業場景"></li>
+                                    <li data-text-en="Seeking internship opportunities to bridge research and practice"
+                                        data-text-ch="尋求實習機會，串聯研究與實務"></li>
+                                </ul>
+                                <div class="timeline-achievements">
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Student Association President | Sep 2025 – Present"
+                                            data-text-ch="學生會長 | 2025/9 - 現今">Student Association President | Sep 2025 –
+                                            Present</span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            data-text-en="Teaching Assistant, Smart Manufacturing Execution System course | Feb 2026 – Present"
+                                            data-text-ch="智慧製造執行系統助教 | 2026/2 - 現今">Teaching Assistant, Smart
+                                            Manufacturing Execution System Course | Feb 2026 – Present</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">TypeScript</span>
+                                    <span class="tag">ASP.NET</span>
+                                    <span class="tag">ADO.NET</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-year">2025/2 - 2025/8</div>
+                                </div>
+                                <h3 class="timeline-title" data-text-en="Department of Media Content | Exchange Student"
+                                    data-text-ch="多媒體設計學系 | 交換學生">Exchange
+                                    Student</h3>
+                                <div class="timeline-company"
+                                    data-text-en="The Catholic University of Korea (CUK), Korea"
+                                    data-text-ch="韓國加圖立大學">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <p class="timeline-description"
+                                    data-text-en="Participated in a semester exchange program in South Korea, motivated by a strong interest in the Korean media industry, particularly its influence in CG and game development. Focused on improving Korean language proficiency in an immersive Korean academic environment."
+                                    data-text-ch="對韓國媒體產業深感興趣，尤其是其在 CG 與遊戲開發領域的卓越表現，赴韓國參與交換生計畫。並於全韓學術環境中提升韓語能力。">
+                                    Participated in a semester exchange program in South Korea, motivated by a strong
+                                    interest in the Korean media industry, particularly its influence in CG and game
+                                    development. Focused on improving Korean language proficiency in an immersive
+                                    academic environment.
+                                </p>
+                                <div class="timeline-achievements">
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="70% Korean & 30% English" data-text-ch="70%韓語 & 30%英語環境">70%
+                                            Korean & 30% English</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-tags">
+                                    <span class="tag">TOPIK Lv.3 → Lv.5</span>
+                                    <span class="tag">Adobe Au</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-year">2021/9 - 2025/6</div>
+                                </div>
+                                <h3 class="timeline-title"
+                                    data-text-en="Bachelor's Degree — Digital Learning and Technology (Systems Track)"
+                                    data-text-ch="數位學習與科技學系 系統組 | 學士">
+                                    Bachelor's Degree — Information and Learning Technology(ILT) | Systems Track
+                                </h3>
+                                <div class="timeline-company"
+                                    data-text-en="National University of Tainan (NUTN), Taiwan"
+                                    data-text-ch="國立臺南大學 (NUTN)">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <p class="timeline-description"
+                                    data-text-en="Specialized in the systems track with a focus on web development, interactive media, and  AI learing technology applications development. Actively involved in academic leadership and research throughout the program."
+                                    data-text-ch="主修系統組，專注於網頁開發、互動媒體與 AI 數位學習應用開發實作。在學期間積極參與學術領導與研究計畫。">
+                                    Specialized in the systems track with a focus on web development, interactive media,
+                                    and AI learing technology applications development. Actively involved in academic
+                                    leadership and research throughout the program.
+                                </p>
+                                <div class="timeline-achievements">
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="19th Dept. Student Association President"
+                                            data-text-ch="第19屆系學會長">
+                                            19th Dept. Student Association President
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Teaching Assistant, Algorithm Course" data-text-ch="演算法助教">
+                                            Teaching Assistant, Algorithm Course
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            data-text-en="Graduation Project Host & Deputy Coordinator (Class of 112 & 113)"
+                                            data-text-ch="112 / 113 級畢業專題｜主持、副召">
+                                            Graduation Project Host & Deputy Coordinator (Class of 112 & 113)
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="NSTC Undergraduate Research Project"
+                                            data-text-ch="國科會大專生研究計畫">
+                                            NSTC Undergraduate Research Project
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="Graduation Project — 1st Place (Class of 114)"
+                                            data-text-ch="114級畢業專題｜冠軍">
+                                            Graduation Project — 1st Place (Class of 114)
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span data-text-en="2024 iLink AI Programming Competition — 2nd Place"
+                                            data-text-ch="2024 iLink 生程式 AI 應用大賽｜亞軍">
+                                            2024 iLink AI Programming Competition — 2nd Place
+                                        </span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span
+                                            data-text-en="2024 National AI Creative Implementation Competition — Honorable Mention"
+                                            data-text-ch="2024 全國 AI 創意實作競賽｜佳作">
+                                            2024 National AI Creative Implementation Competition — Honorable Mention
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">jQuery</span>
+                                    <span class="tag">Bootstrap</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">Unity</span>
+                                    <span class="tag">Blender</span>
+                                    <span class="tag">3Dmax</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section projects-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        <h2 class="section-title">
+                            <span class="title-bracket">&lt;</span>
+                            <span class="title-text" data-text-en="Projects" data-text-ch="過往專案">Projects</span>
+                            <span class="title-bracket">/&gt;</span>
+                        </h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="carousel-wrapper">
+                                    <img class="carousel-slide active" src="./images/projects/potion_1.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/potion_2.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/potion_3.png" alt="">
+                                    <button class="carousel-btn prev">&#8249;</button>
+                                    <button class="carousel-btn next">&#8250;</button>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title" data-text-en="Potion Bar — Browser Game"
+                                    data-text-ch="Potion Bar 顏色調酒遊戲">
+                                    Potion Bar — Browser Game
+                                </h3>
+                                <h3 class="project-subtitle" data-text-en="2022 (original) → 2026 (rebuilt)"
+                                    data-text-ch="2022 (原版) → 2026 (重製)">
+                                </h3>
+
+
+
+                                <div class="project-descriptions">
+                                    <p class="project-description active"
+                                        data-text-en="A time-management browser game built with React and TypeScript. Players serve customers by preparing drinks and food before their patience runs out. Features a slot-based customer spawning system, anger countdown timers, lives mechanic, and pause/resume functionality."
+                                        data-text-ch="以 React 與 TypeScript 開發的時間管理類瀏覽器遊戲。玩家需在顧客耐心耗盡前完成飲料與餐點的供應，包含 Slot 顧客生成系統、憤怒倒數計時、生命值機制與暫停功能。">
+                                        A time-management browser game built with React and TypeScript. Players serve
+                                        customers by preparing drinks and food before their patience runs out. Features
+                                        a
+                                        slot-based customer spawning system, anger countdown timers, lives mechanic, and
+                                        pause/resume functionality.
+                                    </p>
+
+                                    <p class="project-description"
+                                        data-text-en="Encoded drink color combinations as bitmasks — each bit represents a base color ingredient, and mixing colors via bitwise OR produces a unique key for instant O(1) lookup of the resulting color, eliminating the need for nested conditionals or string comparison."
+                                        data-text-ch="以 Bitmask 儲存飲料顏色組合，每個 bit 代表一種基底色，混色操作透過 bitwise OR 產生唯一鍵值，直接對應表查詢結果顏色，取代多層條件判斷。">
+                                    </p>
+
+                                    <p class="project-description" data-text-en="2022 (Original)"
+                                        data-text-ch="2022 (原版)">
+                                    </p>
+                                </div>
+
+                                <div class="project-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">TypeScript</span>
+                                    <span class="tag">Bitmask</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="carousel-wrapper">
+                                    <img class="carousel-slide active" src="./images/projects/KR_0.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/KR_1.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/KR_2.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/KR_3.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/KR_4.png" alt="">
+                                    <button class="carousel-btn prev">&#8249;</button>
+                                    <button class="carousel-btn next">&#8250;</button>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title" data-text-en="Korean Grammar Practice Chat Room"
+                                    data-text-ch="韓文文法練習聊天室">
+                                    Korean Grammar Practice Chat Room
+                                </h3>
+                                <h3 class="project-subtitle" data-text-en="2025/11"
+                                    data-text-ch="2025/11">
+                                </h3>
+
+                                <div class="project-descriptions">
+                                    <p class="project-description active"
+                                        data-text-en="A web-based language learning system that combines real-time chat with Korean grammar correction. Powered by OpenAI API and SignalR, users can practice Korean in a natural conversation environment and receive instant grammar feedback."
+                                        data-text-ch="結合即時通訊與語言學習功能的網頁系統，讓使用者在聊天情境中即時進行韓文文法練習與錯誤修正。整合 OpenAI API 與 SignalR，使學習更貼近實際對話情境。">
+                                        A web-based language learning system that combines real-time chat with Korean
+                                        grammar correction. Powered by OpenAI API and SignalR, users can practice Korean
+                                        in a natural conversation environment and receive instant grammar feedback.
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Real-time Chat (SignalR): Built a bidirectional communication channel using SignalR. Each message sent by the user is simultaneously broadcast to the chat room and forwarded to the backend for grammar analysis."
+                                        data-text-ch="即時聊天室（SignalR）：使用 SignalR 建立雙向即時通訊，使用者送出訊息後，內容會同步廣播至聊天室，並轉送至後端進行文法分析。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="AI Grammar Check (OpenAI): Each message is analyzed by a GPT model, returning structured JSON that includes the corrected sentence, Chinese meaning, error positions, suggested fixes, and grammar rules."
+                                        data-text-ch="AI 文法分析（OpenAI）：每筆訊息皆透過 GPT 模型進行分析，回傳結構化 JSON，包含修正句、中文語意、錯誤位置、建議修正與文法規則說明。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Error Visualization: Grammar errors are highlighted with underlines on the frontend. Hovering over marked words reveals detailed information including the original text, suggestion, reason, and grammar rule."
+                                        data-text-ch="錯誤視覺化：前端將文法錯誤以底線標記呈現，滑鼠 hover 即可查看詳細說明，包含原文、建議修正、錯誤原因與對應文法規則。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Learning History: All grammar analysis results are stored in SQL Server. Users can revisit past errors on a dedicated history page, with each record displaying the original sentence, corrected version, Chinese meaning, and error highlights."
+                                        data-text-ch="學習歷程：每次文法分析結果皆存入 SQL Server 資料庫，使用者可在歷程頁面回顧所有錯誤紀錄，每筆資料包含原句、修正句、中文語意與錯誤標記。">
+                                    </p>
+                                </div>
+
+                                <div class="project-tags">
+                                    <span class="tag">CsHtml</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">ASP.NET Core | SignalR</span>
+                                    <span class="tag">OpenAI GPT-4o</span>
+                                    <span class="tag">SQL Server | ADO.NET</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="carousel-wrapper">
+                                    <img class="carousel-slide active" src="./images/projects/GP_01.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/GP_02.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/GP_11.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/GP_12.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/GP_2.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/GP_31.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/GP_32.png" alt="">
+                                    <button class="carousel-btn prev">&#8249;</button>
+                                    <button class="carousel-btn next">&#8250;</button>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title"
+                                    data-text-en="Children's Independent Help-Seeking Training System — Fire Emergency Simulation"
+                                    data-text-ch="孩童獨立求助口語訓練系統－以火災為例">
+                                    Children's Independent Help-Seeking Training System — Fire Emergency Simulation
+                                </h3>
+                                <h3 class="project-subtitle"
+                                    data-text-en="2024/12 Funded by the National Science Council (No. 113-2813-C-024-008-H)"
+                                    data-text-ch="2024/12 國科會補助計畫（113-2813-C-024-008-H）">
+                                </h3>
+
+
+
+
+                                <div class="project-descriptions">
+                                    <p class="project-description active"
+                                        data-text-en="A Unity-based educational game, designed to train elementary school students to independently call for help during emergencies. The system integrates speech recognition and generative AI to simulate real disaster and emergency calls scenarios with immersive first-person gameplay."
+                                        data-text-ch="針對國小高年級孩童設計之遊戲化學習系統，訓練其在緊急狀況下獨立開口求助。整合語音辨識與生成式AI，以第一人稱沉浸式視角模擬真實火災與求助情境。">
+                                    </p>
+                                    <!-- <img class="project-description" src="/images/projects/GP_0.png" alt=""> -->
+                                    <p class="project-description"
+                                        data-text-en="Introduced two AI tutors — a robot companion providing disaster-prevention guidance, and an emergency dispatcher simulating a real 119 call — both powered by OpenAI GPT-4o with structured disaster knowledge as prompt context. Children interact via voice input (Google Cloud STT), training both situational awareness and verbal help-seeking ability."
+                                        data-text-ch="導入兩位 AI 導師：提供防災知識的遊戲夥伴，以及模擬緊急接線員的救護人員，皆以 OpenAI GPT-4o 結合資料庫防災知識作為提示詞。孩童透過語音輸入（Google Cloud STT）與 GAI(OpenAI GPT-4o) 互動，訓練冷靜分析環境與組織語言求助的能力。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Introduced two AI tutors — a robot companion providing disaster-prevention guidance, and an emergency dispatcher simulating a real 119 call — both powered by OpenAI GPT-4o with structured disaster knowledge as prompt context. Children interact via voice input (Google Cloud STT), training both situational awareness and verbal help-seeking ability."
+                                        data-text-ch="導入兩位 AI 導師：提供防災知識的遊戲夥伴，以及模擬緊急接線員的救護人員，皆以 OpenAI GPT-4o 結合資料庫防災知識作為提示詞。孩童透過語音輸入（Google Cloud STT）與 GAI(OpenAI GPT-4o) 互動，訓練冷靜分析環境與組織語言求助的能力。">
+                                    </p>
+
+                                    <p class="project-description"
+                                        data-text-en="Built a Unity SQLite database storing structured disaster-prevention knowledge sourced from Taiwan's National Fire Agency, alongside user profiles and learning history. An external NodeJS web portal provides separate role-based views — students review their own records, teachers monitor their class, and admins manage the knowledge base in real time."
+                                        data-text-ch="以 Unity SQLite 儲存整理自內政部消防署的防災知識（含日常防災習慣、防災裝置檢核、火災逃生對策），並記錄學習歷程。另建立外部網頁，分設學生端、教師端與管理端，供查閱學習記錄及即時維護防災知識庫。">
+                                    </p>
+
+                                    <p class="project-description"
+                                        data-text-en="After each session, the AI dispatcher auto-generates a structured three-part feedback report covering the player's responses, GAI analysis, and a scored evaluation across three dimensions — fluency, dialogue efficiency, and information completeness — totaling 12 points and visualized with a star rating stored for future review."
+                                        data-text-ch="每次訓練結束後，AI 救護人員自動生成三部分固定格式回饋報告，涵蓋玩家回答、GAI 分析與評分，依流暢度、對話效率、訊息完整性三項評估，總分 12 分，以星星視覺化呈現，並存入資料庫供日後查閱。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="After each session, the AI dispatcher auto-generates a structured three-part feedback report covering the player's responses, GAI analysis, and a scored evaluation across three dimensions — fluency, dialogue efficiency, and information completeness — totaling 12 points and visualized with a star rating stored for future review."
+                                        data-text-ch="每次訓練結束後，AI 救護人員自動生成三部分固定格式回饋報告，涵蓋玩家回答、GAI 分析與評分，依流暢度、對話效率、訊息完整性三項評估，總分 12 分，以星星視覺化呈現，並存入資料庫供日後查閱。">
+                                    </p>
+                                </div>
+
+                                <div class="project-tags">
+                                    <span class="tag">C# | Unity</span>
+                                    <span class="tag">SQLite</span>
+                                    <span class="tag">OpenAI GPT-4o</span>
+                                    <span class="tag">Google Cloud STT</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="carousel-wrapper">
+                                    <img class="carousel-slide active" src="./images/projects/LMS_01.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/LMS_02.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/LMS_1.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/LMS_2.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/LMS_3.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/LMS_4.png" alt="">
+                                    <button class="carousel-btn prev">&#8249;</button>
+                                    <button class="carousel-btn next">&#8250;</button>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title" data-text-en="LMS — Stationery Store Staff Training System"
+                                    data-text-ch="學習管理系統＿文具店新進員工訓練系統">
+                                    LMS — Stationery Store Staff Training System
+                                </h3>
+                                <h3 class="project-subtitle" data-text-en="2024/1"
+                                    data-text-ch="2024/1">
+                                </h3>
+
+                                <div class="project-descriptions">
+                                    <p class="project-description active"
+                                        data-text-en="A web-based LMS built to digitalize onboarding training for stationery store new hires. Covers shelf layout memorization, product knowledge quizzes, and practical checkout simulations — successfully deployed and used in a real workplace before being taken offline due to server costs."
+                                        data-text-ch="以網頁技術開發的學習管理系統，數位化文具店新進員工訓練流程，涵蓋排面記憶、基本常識測驗與實務結帳模擬。曾實際投入職場使用，成效良好，後因伺服器費用問題而下線。">
+                                        A web-based LMS built to digitalize onboarding training for stationery store new
+                                        hires. Covers shelf layout memorization, product knowledge quizzes, and
+                                        practical
+                                        checkout simulations — successfully deployed and used in a real workplace before
+                                        being taken offline due to server costs.
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="A web-based LMS built to digitalize onboarding training for stationery store new hires. Covers shelf layout memorization, product knowledge quizzes, and practical checkout simulations — successfully deployed and used in a real workplace before being taken offline due to server costs."
+                                        data-text-ch="以網頁技術開發的學習管理系統，數位化文具店新進員工訓練流程，涵蓋排面記憶、基本常識測驗與實務結帳模擬。曾實際投入職場使用，成效良好，後因伺服器費用問題而下線。">
+                                        A web-based LMS built to digitalize onboarding training for stationery store new
+                                        hires. Covers shelf layout memorization, product knowledge quizzes, and
+                                        practical
+                                        checkout simulations — successfully deployed and used in a real workplace before
+                                        being taken offline due to server costs.
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Server: Built a RESTful API server with Node.js and Express, storing data in JSON format. Supports user registration and persists each session's learning history — designed to handle simultaneous access by ~30 users during live classroom testing."
+                                        data-text-ch="伺服器：使用 Node.js 搭配 Express 框架建立 RESTful API 伺服器，以 JSON 格式儲存資料，支援使用者註冊與學習歷程紀錄，並成功應對約 30 人同時上線測試的需求。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Shelf Layout: Digitalized the shelf memorization test — staff use any device to fill in product positions and get instant answer comparison with wrong-item tracking, replacing paper-and-pencil walkthrough tests entirely."
+                                        data-text-ch="排面：將排面記憶測驗數位化，員工可透過電腦或手機作答商品位置，完成後一鍵比對答案並自動記錄錯題，取代原本紙筆巡店記錄的方式。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Knowledge Quiz: Pre-set product knowledge questions with automatic grading and learning history tracking, eliminating the need for manually prepared printed exams and making progress review effortless."
+                                        data-text-ch="常識測驗：預先設定商品相關考題，系統自動批改並記錄學習成果，免去人工出考卷的麻煩，讓新人快速掌握產品知識。">
+                                    </p>
+                                    <p class="project-description"
+                                        data-text-en="Checkout Simulation: Interactive scenario-based practice for real checkout flows and common customer questions, so new hires build confidence before facing actual customers on the floor."
+                                        data-text-ch="實務模擬：提供情境式結帳流程互動演練，包含顧客常見問題應對，讓新人提前熟悉實際作業，避免上場時手忙腳亂。">
+                                    </p>
+                                </div>
+
+                                <div class="project-tags">
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Node.js | Express</span>
+                                    <span class="tag">RESTful API</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="carousel-wrapper">
+                                    <img class="carousel-slide active" src="./images/projects/Travel_0.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/Travel_1.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/Travel_2.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/Travel_3.png" alt="">
+                                    <img class="carousel-slide" src="./images/projects/Travel_4.png" alt="">
+                                    <button class="carousel-btn prev">&#8249;</button>
+                                    <button class="carousel-btn next">&#8250;</button>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title" data-text-en="Lion Travel — UI Recreation"
+                                    data-text-ch="雄獅旅遊網 — UI重建">
+                                    Lion Travel — UI Recreation
+                                </h3>
+                                <h3 class="project-subtitle" data-text-en="2023/5"
+                                    data-text-ch="2023/5">
+                                </h3>
+
+                                <div class="project-descriptions">
+                                    <p class="project-description active"
+                                        data-text-en="This webpage is recreated based on LionTravel.com. All code was written from scratch; only the content and images are sourced from LionTravel.com."
+                                        data-text-ch="此網頁以'雄獅旅遊網'做為復刻依據，所有程式碼皆為自行撰寫，僅內容、圖片源自該網站"></p>
+                                </div>
+
+                                <div class="project-tags">
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">CSS | Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    </body>
+
+    </html>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
